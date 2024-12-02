@@ -48,9 +48,17 @@ a,
 h1,
 h2,
 h3,
-h4 {
-  font-size: 16px;
+h4,
+input,
+label {
   color: var(--white);
+}
+
+p,
+a,
+input,
+label {
+  font-size: 16px;
 }
 
 h1 {
@@ -66,7 +74,7 @@ h3 {
 }
 
 h4 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .small {
@@ -99,6 +107,30 @@ hr {
 
 .social {
   height: 30px;
+}
+
+.millau {
+  height: 15px;
+}
+
+.biosuisse {
+  height: 50px;
+}
+
+/* BUTTONS */
+
+.button {
+  border-radius: 7px;
+  border: 1px solid var(--white);
+  background: none;
+  height: 30px;
+  padding: 0px 20px;
+  transition: all 50ms linear;
+}
+
+.button:hover {
+  background: var(--white);
+  color: var(--black);
 }
 
 /* HEADER */
@@ -149,11 +181,42 @@ hr {
   gap: 20px;
 }
 
-.footer-content a {
+.footer a,
+.footer-end a {
   text-decoration: underline;
 }
 
 .social-media {
   display: flex;
   gap: 10px;
+}
+
+.e-mail {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  background: none;
+}
+
+.inscription {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.endorsements {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-end-left {
+  display: flex;
+  gap: 30px;
 }
