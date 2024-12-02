@@ -91,6 +91,10 @@ hr {
   font-weight: 700;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 /* IMGS */
 
 .bramois {
@@ -164,7 +168,7 @@ hr {
 .menu-burger {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 7px;
 }
 
 /* FOOTER */
@@ -178,12 +182,7 @@ hr {
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.footer a,
-.footer-end a {
-  text-decoration: underline;
+  gap: 15px;
 }
 
 .social-media {
