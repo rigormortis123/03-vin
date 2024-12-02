@@ -137,6 +137,12 @@ hr {
 
 /* FOOTER */
 
+.footer {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
 .footer-content {
   display: flex;
   flex-direction: column;
