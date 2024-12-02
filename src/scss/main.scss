@@ -20,25 +20,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BOOTSTRAP TEMP */
-.row + .row {
-  margin-top: 16px;
+/* VARIABLES */
+:root {
+  --pure-black: #000000;
+  --black: #0c0c0c;
+  --white: #ffffff;
+  --grey: #ffffff59;
+  --black-opaque: rgba(0, 0, 0, 0.75);
 }
 
 .row > .col,
 .row > [class^="col-"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(122, 95, 162, 0.693);
-  border: 1px solid rgba(122, 95, 162, 0.693);
+  color: white;
+  background-color: rgba(145, 112, 193, 0.239);
+  border: 1px solid rgba(145, 112, 193, 0.239);
 }
 
-/* VARIABLES */
-:root {
-  --black: #0c0c0c;
-  --white: #ffffff;
-  --grey: #ffffff59;
-  --black-opaque: rgba(0, 0, 0, 0.8);
+.row {
+  margin: 0px;
 }
 
 /* TEXT */
@@ -62,7 +61,8 @@ label {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 90px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -71,6 +71,7 @@ h2 {
 
 h3 {
   font-size: 35px;
+  width: 1800px;
 }
 
 h4 {
@@ -93,6 +94,10 @@ hr {
 
 .text-underline {
   text-decoration: underline;
+}
+
+.banner-text p {
+  color: var(--grey);
 }
 
 /* IMGS */
@@ -121,15 +126,30 @@ hr {
   height: 50px;
 }
 
+.banner-img img {
+  position: relative;
+  bottom: 400px;
+  left: 80px;
+  height: 750px;
+  transform: rotate(-10deg);
+  opacity: 90%;
+}
+
+.text-animation {
+  background: var(--pure-black);
+  padding: 15px 0px;
+  overflow: hidden;
+}
+
 /* BUTTONS */
 
 .button {
   border-radius: 7px;
   border: 1px solid var(--white);
   background: none;
-  height: 30px;
-  padding: 0px 20px;
+  padding: 5px 20px;
   transition: all 50ms linear;
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -140,6 +160,7 @@ hr {
 /* HEADER */
 
 .header {
+  z-index: 1;
   position: sticky;
   display: flex;
   flex-direction: row;
@@ -169,6 +190,32 @@ hr {
   display: flex;
   flex-direction: row;
   gap: 7px;
+}
+
+/* BANNER */
+
+.banner {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(
+    143deg,
+    rgba(168, 36, 36, 0.39) 18.93%,
+    rgba(168, 36, 36, 0) 39.64%
+  );
+  padding: 60px 80px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.banner-img {
+  height: 250px;
 }
 
 /* FOOTER */
@@ -218,4 +265,8 @@ hr {
 .footer-end-left {
   display: flex;
   gap: 30px;
+}
+
+.footer-section {
+  padding: 20px 0px;
 }
