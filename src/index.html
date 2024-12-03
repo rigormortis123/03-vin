@@ -6,149 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
+
   <body>
-    <div class="row">
-      <div class="col">
-        <div class="header">
-          <img class="bramois" src="./imgs/logo-bramois.svg" />
-
-          <div class="header-content">
-            <a class="header-item" href="#vins">Nos vins</a>
-
-            <div class="menu-burger">
-              <p href="#apropos">A propos</p>
-              <img class="chevron" src="./imgs/icon-chevron.svg" />
-            </div>
-
-            <a class="header-item small" href="#vente">Vente en ligne</a>
-            <a class="header-item small" href="#visites">Visites / événement</a>
-            <a class="header-item small" href="#visites">Contact</a>
-          </div>
-
-          <div class="header-content">
-            <img class="shop" src="./imgs/icon-shop.svg" />
-            <hr />
-            <div class="menu-burger">
-              <p style="font-weight: 700" class="small">FR</p>
-              <img class="chevron" src="./imgs/icon-chevron.svg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="banner">
-            <h1>Révélez l'âme du terroir</h1>
-            <div class="row">
-              <div class="col-6">
-                <div class="banner-text">
-                  <p>
-                    La Cave de Vin Bramois allie respect du terroir et
-                    innovation, en privilégiant des méthodes durables pour
-                    produire des vins authentiques et de qualité.
-                  </p>
-
-                  <a class="button">Notre philosophie</a>
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div class="banner-img">
-                  <img src="./imgs/bouteille-pinot-noir-derriere.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="text-animation">
-          <h3>
-            “ L'âme trouve son repos en dormant peu, le coeur dans le peu
-            d'inquiétudes et la langue dans le silence.”
-          </h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-10">
-          <div class="row">
-            <div class="col-12 col-sm-6"><div class="card"></div></div>
-
-            <div class="col-12 col-sm-6"><div class="card"></div></div>
-          </div>
-
-          <div class="row">
-            <div class="col"><div class="card"></div></div>
-          </div>
-        </div>
-
-        <div class="col">deco</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <hr />
+    <extends src="base.html">
+      <block name="content">
         <div class="container">
           <div class="row">
-            <div class="col footer-section">
-              <div class="footer">
-                <div class="footer-content">
-                  <img class="bramois" src="./imgs/logo-bramois.svg" />
+            <div class="col">
+              <div class="banner">
+                <h1>Révélez l'âme du terroir</h1>
 
-                  <p>
-                    Rue du Château 3 <br />
-                    1788 Praz-Vully, Suisse
-                  </p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="banner-text">
+                      <p>
+                        La Cave de Vin Bramois allie respect du terroir et
+                        innovation, en privilégiant des méthodes durables pour
+                        produire des vins authentiques et de qualité.
+                      </p>
 
-                  <a class="text-underline" href="#localiser">Localiser</a>
-                  <div class="social-media">
-                    <a href="https://minesweeper.online/"
-                      ><img class="social" src="./imgs/icon-facebook.svg"
-                    /></a>
-                    <a href="https://minesweeper.online/"
-                      ><img class="social" src="./imgs/icon-instagram.svg"
-                    /></a>
+                      <a class="button">Notre philosophie</a>
+                    </div>
                   </div>
-                </div>
 
-                <div class="footer-content">
-                  <p class="footer-title">Ventes / dégustations</p>
-
-                  <p>
-                    Mercredi, jeudi, vendredi: <br />
-                    9h30 - 12h, 14h30, 17h30
-                  </p>
-
-                  <p>samedi: 9h30 - 15h30</p>
-
-                  <a class="text-underline" href="tel:+41 26 123 45 67"
-                    >+41 26 123 45 67</a
-                  >
-                </div>
-
-                <div class="footer-content">
-                  <h4>Échos des vignes</h4>
-                  <label>Inscrivez-vous à notre newsletter</label>
-                  <div class="inscription">
-                    <input
-                      class="e-mail"
-                      type="email"
-                      id="email"
-                      pattern=".+@example\.com"
-                      placeholder="Votre e-mail"
-                    />
-
-                    <input class="button" type="submit" value="Inscription" />
+                  <div class="col-6">
+                    <div class="banner-img">
+                      <img src="./imgs/bouteille-pinot-noir-derriere.png" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,40 +40,36 @@
           </div>
         </div>
 
-        <hr />
-
-        <div class="container">
-          <div class="row">
-            <div class="col footer-section">
-              <div class="endorsements">
-                <img class="millau" src="./imgs/logo-millau.svg" />
-                <img class="biosuisse" src="./imgs/logo-biosuisse.svg" />
-              </div>
+        <div class="row">
+          <div class="col">
+            <div class="text-animation">
+              <h3>
+                “ L'âme trouve son repos en dormant peu, le coeur dans le peu
+                d'inquiétudes et la langue dans le silence.”
+              </h3>
             </div>
           </div>
         </div>
 
-        <hr />
-
         <div class="container">
           <div class="row">
-            <div class="col footer-section">
-              <div class="footer-end">
-                <div class="footer-end-left">
-                  <a class="text-underline" href="https://minesweeper.online/"
-                    >Protéction des données / cookies</a
-                  >
-                  <a class="text-underline" href="https://minesweeper.online/"
-                    >Conditions génerales</a
-                  >
-                </div>
-                <p>© 2024 Bramois. touts droits réservés.</p>
+            <div class="col-10">
+              <div class="row">
+                <div class="col-12 col-sm-6"><div class="card"></div></div>
+
+                <div class="col-12 col-sm-6"><div class="card"></div></div>
+              </div>
+
+              <div class="row">
+                <div class="col"><div class="card"></div></div>
               </div>
             </div>
+
+            <div class="col">deco</div>
           </div>
         </div>
-      </div>
-    </div>
+      </block>
+    </extends>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
