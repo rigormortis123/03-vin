@@ -9,7 +9,24 @@
 
   <body>
     <extends src="base.html">
-      <block name="content"> lol </block>
+      <block name="content">
+        <a></a>
+        <div class="container">
+          <div class="row spacing">
+            <div class="col">breadcrumb</div>
+          </div>
+
+          <div class="row spacing">
+            <div class="col-5">image</div>
+
+            <div class="col-7">texte</div>
+          </div>
+
+          <div class="row spacing">
+            <div class="col-8 offset-2">prix</div>
+          </div>
+        </div>
+      </block>
     </extends>
 
     <script src="js/main.js" type="module"></script>
