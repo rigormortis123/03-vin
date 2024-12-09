@@ -24,6 +24,7 @@
   --grey: #ffffff65;
   --black-opaque: rgba(0, 0, 0, 0.75);
   --red: #a82424;
+  --bezier-anim: cubic-bezier(0.26, 0, 0.25, 1.01);
 }
 
 /* GENERAL */
@@ -65,14 +66,16 @@ h2,
 h3,
 h4,
 input,
-label {
+label,
+ul {
   color: var(--white);
 }
 
 p,
 a,
 input,
-label {
+label,
+ul {
   font-size: 16px;
 }
 
@@ -175,15 +178,6 @@ hr {
   height: 50px;
 }
 
-.banner-img img {
-  position: relative;
-  bottom: 400px;
-  left: 80px;
-  height: 750px;
-  transform: rotate(-10deg);
-  opacity: 90%;
-}
-
 /* BUTTONS */
 
 .button {
@@ -197,6 +191,58 @@ hr {
 
 .button:hover {
   background: var(--grey);
+}
+
+/* MENU BURGER*/
+
+.burger {
+  display: flex;
+  gap: 7px;
+  position: relative;
+  z-index: 1; /* permet de faire passer le lien devant le menu */
+}
+
+.menu {
+  top: 20px;
+  padding: 20px 10px;
+  position: absolute;
+  background: linear-gradient(transparent 0%, var(--black) 10%);
+  opacity: 0; /* par défaut, le menu a une opacité de 0 */
+  pointer-events: none; /* par défaut, le menu ne peut pas être cliqué */
+  transition: opacity 0.3s;
+  /* par défaut, on décale le menu de 100% vers la droite */
+  transition: transform 0.3s;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  transition: all 150ms var(--bezier-anim);
+  transform: translateY(-10px);
+}
+
+.menu hr {
+  margin: 10px 0px;
+}
+
+.menu.is-active {
+  transform: translateY(0px);
+  opacity: 1; /* avec la classe is-active, le menu a une opacité de 1 */
+  pointer-events: auto; /* avec la classe is-active, le menu peut être cliqué */
+}
+
+.chevron {
+  transform: rotate(0deg);
+  transition: transform 100ms ease-out;
+}
+
+.chevron-anim {
+  transform: rotate(-180deg);
+}
+
+.menu a:hover {
+  transition: all 50ms linear;
+}
+
+.menu a:hover {
+  color: var(--grey);
 }
 
 /* HEADER */
@@ -228,12 +274,6 @@ header {
   gap: 25px;
   height: 100%;
   align-items: center;
-}
-
-.menu-burger {
-  display: flex;
-  flex-direction: row;
-  gap: 7px;
 }
 
 /* FOOTER */
@@ -317,7 +357,22 @@ header {
 }
 
 .banner-img {
+  display: block;
   height: 250px;
+}
+
+.banner-img img {
+  position: relative;
+  bottom: 400px;
+  left: 80px;
+  height: 750px;
+  transform: rotate(-10deg);
+  opacity: 90%;
+  transition: transform 100ms var(--bezier-anim);
+}
+
+.banner-img img:hover {
+  transform: rotate(-5deg), scale(1.2);
 }
 
 /* SECOND SECTION */
@@ -374,7 +429,7 @@ header {
   bottom: 0;
   left: 0;
   transform: translateY(160px);
-  transition: all 400ms cubic-bezier(0.26, 0, 0.25, 1.01);
+  transition: all 400ms var(--bezier-anim);
   padding: 60px 40px;
 }
 
@@ -470,6 +525,10 @@ header {
 
 .breadcrumb {
   text-transform: uppercase;
+}
+
+.breadcrumb a {
+  transition: all 50ms linear;
 }
 
 .breadcrumb a:hover {
