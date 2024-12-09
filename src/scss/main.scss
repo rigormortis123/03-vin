@@ -1,11 +1,11 @@
 /* TEMP */
 
-.row > .col,
-.row > [class^="col-"] {
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-  color: white;
-}
+// .row > .col,
+// .row > [class^="col-"] {
+//   background-color: rgba(86, 61, 124, 0.15);
+//   border: 1px solid rgba(86, 61, 124, 0.2);
+//   color: white;
+// }
 
 /* BOOTSTRAP */
 
@@ -23,6 +23,7 @@
   --white: #ffffff;
   --grey: #ffffff65;
   --black-opaque: rgba(0, 0, 0, 0.75);
+  --red: #a82424;
 }
 
 /* GENERAL */
@@ -139,6 +140,15 @@ hr {
   animation-play-state: paused;
 }
 
+.li {
+  color: var(--red);
+  margin: 0px 10px;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
 /* IMAGES */
 
 .bramois {
@@ -181,7 +191,7 @@ hr {
   border: 1px solid var(--white);
   background: none;
   padding: 5px 20px;
-  transition: all 50ms ease-in-out;
+  transition: all 75ms ease-in-out;
   text-transform: uppercase;
 }
 
@@ -224,6 +234,64 @@ header {
   display: flex;
   flex-direction: row;
   gap: 7px;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.e-mail {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  background: none;
+}
+
+.inscription {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.endorsements {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-end-left {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-section {
+  padding: 20px 0px;
 }
 
 /* BANNER */
@@ -370,60 +438,99 @@ header {
   font-weight: 700;
 }
 
-/* FOOTER */
+/* PAGE VIN */
 
-.footer {
+.traits-vin,
+.vin-info {
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vin-icon-section {
+  display: flex;
   justify-content: space-between;
 }
 
-.footer-title {
-  text-transform: uppercase;
+.vin-icon {
+  width: 190px;
+  text-align: center;
+}
+
+.vin-icon img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.font-weight-700 {
   font-weight: 700;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.breadcrumb {
+  text-transform: uppercase;
 }
 
-.social-media {
-  display: flex;
-  gap: 10px;
+.breadcrumb a:hover {
+  color: var(--grey);
 }
 
-.e-mail {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid var(--white);
-  background: none;
+.breadcrumb img {
+  display: inline;
+  height: 15px;
 }
 
-.inscription {
-  display: flex;
-  gap: 10px;
+.breadcrumb-dividing {
+  margin: 0px 7px;
+}
+
+.vin-image {
+  height: 400px;
+  object-fit: cover;
+}
+
+.vin-image,
+.vin-image-gallery img {
   width: 100%;
 }
 
-.endorsements {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  align-items: center;
+.vin-image-gallery img {
+  height: 110px;
+  width: 110px;
+  object-fit: cover;
+  border-radius: 7px;
 }
 
-.footer-end {
+.vin-image-gallery {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.footer-end-left {
-  display: flex;
-  gap: 30px;
+.selected-img {
+  border: 4px solid var(--grey);
 }
 
-.footer-section {
-  padding: 20px 0px;
+.prix {
+  border: 1px solid var(--grey);
+  border-radius: 7px;
+  padding: 20px 50px;
+}
+
+.prix h4 {
+  text-align: center;
+}
+
+.prix-add {
+  display: flex;
+  gap: 10px;
+}
+
+.prix-bottom {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bramois</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss" />
+  </head>
+
+  <body>
+    <extends src="base.html">
+      <block name="content">
+        <a></a>
+        <div class="container">
+          <div class="row spacing">
+            <div class="col">
+              <p class="breadcrumb font-weight-700">
+                <a href="index.html"><img src="./imgs/icon-house.svg" /></a>
+
+                <span class="breadcrumb-dividing">/</span>
+
+                <a
+                  href="https://eikon-imd.notion.site/Supports-de-cours-imd2-Frontend-Development-2024-2025-fda88a40ef9a4956815ee7cae44f9136"
+                >
+                  Nos vins
+                </a>
+
+                <span class="breadcrumb-dividing">/</span>
+
+                <a
+                  href="https://eikon-imd.notion.site/Supports-de-cours-imd2-Frontend-Development-2024-2025-fda88a40ef9a4956815ee7cae44f9136"
+                >
+                  Rouge
+                </a>
+
+                <span class="breadcrumb-dividing">/</span>
+                Pinot Noir
+              </p>
+            </div>
+          </div>
+
+          <div class="row spacing">
+            <div class="col-5">
+              <img
+                class="vin-image"
+                src="./imgs/mockup-gewürztraminer.png"
+                alt="Gewürztraminer"
+              />
+
+              <div class="vin-image-gallery">
+                <img
+                  class="selected-img"
+                  src="./imgs/mockup-gewürztraminer.png"
+                />
+
+                <img src="./imgs/bouteille-gewürztraminer-devant.png" />
+
+                <img src="./imgs/bouteille-gewürztraminer-derriere.png" />
+              </div>
+            </div>
+
+            <div class="col-7">
+              <div class="vin-info">
+                <h2>Gewürztraminer</h2>
+
+                <p>
+                  Le Pinot Noir présente une robe rouge rubis claire. Au nez, il
+                  offre des arômes de fruits rouges frais (cerise, framboise) et
+                  des notes florales. En bouche, il est léger, avec une belle
+                  acidité et des tanins fins. La finale est élégante, fruitée et
+                  légèrement épicée.
+                </p>
+
+                <hr />
+
+                <div class="traits-vin">
+                  <p><span class="li">-</span>Millésime actuel de 2022</p>
+
+                  <p><span class="li">-</span>Premier millésime en 2003</p>
+
+                  <p>
+                    <span class="li">-</span>Cépage à base de Sérine et Noirien
+                  </p>
+
+                  <p>
+                    <span class="li">-</span> - Fermentation en cuves ou fûts,
+                    macération courte, élevage en fût de 6 à 18 mois.
+                  </p>
+
+                  <hr />
+
+                  <div class="vin-icon-section">
+                    <div class="vin-icon">
+                      <img src="./imgs/icon-accords.svg" />
+
+                      <p>Viande, poisson, fromage, plats végetariens</p>
+                    </div>
+
+                    <div class="vin-icon">
+                      <img src="./imgs/icon-service.svg" />
+
+                      <p>14-16°C</p>
+                    </div>
+
+                    <div class="vin-icon">
+                      <img src="./imgs/icon-garde.svg" />
+
+                      <p>8-10 années</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row spacing">
+            <div class="col-8 offset-2">
+              <div class="prix">
+                <h4 class="font-weight-400">CHF 13.34</h4>
+
+                <div class="prix-bottom">
+                  <p class="prix-add">
+                    <a class="prix-change minus">-</a> 1
+                    <a class="prix-change plus">+</a>
+                  </p>
+
+                  <a class="button">
+                    Ajouter au panier -
+                    <span class="font-weight-700">CHF 13.34</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </block>
+    </extends>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
