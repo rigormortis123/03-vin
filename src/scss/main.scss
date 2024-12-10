@@ -81,7 +81,7 @@ ul {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 120px;
   text-transform: uppercase;
 }
 
@@ -163,10 +163,6 @@ hr {
   height: 20px;
 }
 
-.chevron {
-  width: 10px;
-}
-
 .social {
   height: 30px;
 }
@@ -199,6 +195,7 @@ hr {
 .burger {
   display: flex;
   gap: 7px;
+  align-items: center;
   position: relative;
   z-index: 1; /* permet de faire passer le lien devant le menu */
 }
@@ -227,6 +224,8 @@ hr {
 }
 
 .chevron {
+  height: 10px;
+  width: 10px;
   transform: rotate(0deg);
   transition: transform 200ms ease-out;
 }
@@ -352,6 +351,11 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
+  text-align: center;
+}
+
+.banner-text p {
+  max-width: 450px;
 }
 
 .banner-img {
@@ -482,7 +486,7 @@ header {
 .deco-text {
   writing-mode: vertical-rl;
   padding-left: 50px;
-  font-size: 79px;
+  font-size: 81px;
   text-transform: uppercase;
   font-weight: 700;
   transform: scaleX(1.8);
