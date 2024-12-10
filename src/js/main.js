@@ -1,15 +1,18 @@
-var burger = document.querySelector(".burger");
-var menu = document.querySelector(".menu");
-var chevron = document.querySelector(".chevron");
+// select all .burgers
+var burgers = document.querySelectorAll(".burger");
 
-var toggleMenu = function toggleMenu() {
-  menu.classList.toggle("is-active");
-};
+// create loop
+burgers.forEach((burger) => {
+  // select these elements inside each .burger
+  var menu = burger.querySelector(".menu");
+  var chevron = burger.querySelector(".chevron");
 
-burger.addEventListener("click", toggleMenu);
+  // add class to items inside loops, function is called togglemenu
+  var toggleMenu = function toggleMenu() {
+    menu.classList.toggle("is-active");
+    chevron.classList.toggle("chevron-anim");
+  };
 
-var toggleMenu = function toggleMenu() {
-  chevron.classList.toggle("chevron-anim");
-};
-
-burger.addEventListener("click", toggleMenu);
+  // Listen for click, start togglemenu function
+  burger.addEventListener("click", toggleMenu);
+});
